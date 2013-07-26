@@ -3,3 +3,10 @@
 *.pyc
 local_settings.py
 .DS_Store
+.venv
+.tox
+build
+dist
+AUTHORS
+ChangeLog
+tags
