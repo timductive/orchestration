@@ -1,4 +1,4 @@
-rs-orchestration
+orchestration
 ================
 
 Temporary house Orchestration UI
