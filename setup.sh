@@ -9,16 +9,6 @@ sudo easy_install virtualenv
 sudo easy_install pip
 
 #==================================================#
-# Setup django
-#==================================================#
-#pip install django
-
-# Create and initialize a new directory called django_project
-#django-admin.py startproject cloud_control
-
-#cd ./cloud_control
-
-#==================================================#
 # Setup Virtual Environment
 #==================================================#
 echo "Setting up Virtual Environment"
