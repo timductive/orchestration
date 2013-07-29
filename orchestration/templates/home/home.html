@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+<h1>Welcome to Cloud Orchestration!</h1>
+<p>Rackspace Cloud Orchestration uses the Openstack Heat Infrastructure to allow you to easily launch customizable,
+	automated cloud environments.</p>
+<p><a class="btn btn-primary btn-large">Get Started &raquo;</a></p>
+</div>
+
+<div class="body-content">
+
+
+<!-- Example row of columns -->
+<div class="row homestacks">
+  <div class="col-lg-3">
+  	<div class="center">
+	    <img src="{{STATIC_URL}}img/wordpress.png" />
+	    <h2>Wordpress</h2>
+    	<p><a class="btn btn-default" href="#">Launch &raquo;</a></p>
+	</div>
+  </div>
+  <div class="col-lg-3">
+  	<div class="center">
+	    <img src="{{STATIC_URL}}img/awwbomb.png" />
+	    <h2>Awwbomb</h2>
+	    <p><a class="btn btn-default" href="#">Launch &raquo;</a></p>
+	</div>
+ </div>
+  <div class="col-lg-3">
+  	<div class="center">
+	    <img src="{{STATIC_URL}}img/python.png" />
+	    <h2>Python</h2>
+	    <p><a class="btn btn-default" href="#">Launch &raquo;</a></p>
+	   </div>
+  </div>
+  <div class="col-lg-3">
+  	<div class="center">
+	    <img src="{{STATIC_URL}}img/mysql.png" />
+	    <h2>MySQL</h2>
+	    <p><a class="btn btn-default" href="#">Launch &raquo;</a></p>
+	</div>
+  </div>
+</div>
+
+
+{% endblock %}

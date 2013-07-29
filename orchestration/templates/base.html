@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap/bootstrap.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}less/orchestration.css" media="screen" />
+    {% endblock %}
+
+    {% block js %}
+    <script src='{{ STATIC_URL }}js/jquery-1.10.2.min.js' type='text/javascript' charset="utf-8"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+
+    {% endblock %}
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="{{STATIC_URL}}img/CloudControlHeaderLogo.png" /></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Orchestration <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Cloud Backup</a></li>
+                <li><a href="#">Cloud Files</a></li>
+                <li><a href="#">Databases</a></li>
+                <li><a href="#">Monitoring</a></li>
+                <li><a href="#">Load Balancers</a></li>
+                <li><a href="#">Block Storage</a></li>
+                <li><a href="#">Networks</a></li>
+                <li><a href="#">DNS</a></li>
+                <li><a href="#">PAAS</a></li>
+                <li><a href="#">Servers</a></li>
+              </ul>
+            </li>
+
+            {% for nav in orchestration_nav %}
+              <li class="{{nav.class}}"><a href="{{nav.url}}">{{nav.name}}</a></li>
+            {% endfor %}
+          </ul>
+          <form class="navbar-form form-inline pull-right">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit" class="btn">Sign in</button>
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+      <hr>
+      <footer>
+        <p>&copy; Rackspace 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+  </body>
+</html>
