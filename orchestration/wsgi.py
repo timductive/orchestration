@@ -30,3 +30,6 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+path = '/home/cloud/orchestration'
+if path not in sys.path:
+    sys.path.append(path)
